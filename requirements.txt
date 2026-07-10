@@ -6,3 +6,4 @@ beautifulsoup4>=4.12
 click>=8.1
 python-telegram-bot>=20.0
 python-dotenv>=1.0
+pyyaml>=6.0
