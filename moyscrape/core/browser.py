@@ -9,6 +9,7 @@ STEALTH = {
 
 def fetch_browser(url: str, proxy: str | None = None) -> str:
     """Render page with Playwright + light stealth. Returns full HTML."""
+    proxy = proxy or None
     with sync_playwright() as p:
         browser = p.chromium.launch(
             headless=True, args=["--no-sandbox", "--disable-dev-shm-usage"])

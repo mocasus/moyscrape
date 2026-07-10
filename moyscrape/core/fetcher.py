@@ -11,6 +11,7 @@ DEFAULT_HEADERS = {
 def fetch(url: str, proxy: str | None = None, timeout: int = 20,
           headers: dict | None = None):
     """Fast HTTP fetch via httpx. Returns (html, status, headers)."""
+    proxy = proxy or None
     h = {**DEFAULT_HEADERS, **(headers or {})}
     with httpx.Client(headers=h, proxy=proxy, follow_redirects=True,
                       timeout=timeout, verify=False) as c:

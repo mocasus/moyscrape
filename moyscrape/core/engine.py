@@ -68,6 +68,7 @@ class Engine:
         return (Selector(text=html).css("title::text").get() or "").strip()
 
     def _fetch(self, url: str, proxy: str | None, force_browser: bool) -> str:
+        proxy = proxy or None
         html, status, _ = fetcher.fetch(url, proxy=proxy)
         if force_browser or fetcher.looks_blocked(html, status):
             try:
