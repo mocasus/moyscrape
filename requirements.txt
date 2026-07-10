@@ -1,0 +1,8 @@
+httpx>=0.27
+trafilatura>=1.12
+playwright>=1.44
+parsel>=1.9
+beautifulsoup4>=4.12
+click>=8.1
+python-telegram-bot>=20.0
+python-dotenv>=1.0

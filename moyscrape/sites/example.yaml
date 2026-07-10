@@ -1,0 +1,7 @@
+# Preset: declarative selector-based extraction (no LLM needed).
+# expr syntax: "css" (text) or "css::attr" (attribute, e.g. a::href).
+domain: example.com
+selectors:
+  title: "h1::text"
+  headings: "h2::text"
+  links: "a::href"

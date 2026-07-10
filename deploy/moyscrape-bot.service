@@ -1,0 +1,12 @@
+[Unit]
+Description=moyscrape telegram bot
+After=network.target
+
+[Service]
+WorkingDirectory=/root/moyscrape
+ExecStart=/root/moyscrape/venv/bin/python -m bot.telegram_bot
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
